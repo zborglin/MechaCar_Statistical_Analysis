@@ -2,7 +2,7 @@
 - R application
 
 ## Purpose 
-- Review of car manufacturing data, investigation of suspected specification issues.
+- Review of MechaCar (car prototype) manufacturing data, investigation of suspected specification issues.
 
 ##  Resources
 - R version 4.0.3
@@ -18,7 +18,9 @@ The following factors are considered in this linear model:
 - Spoiler Angle
 - Ground Clearance
 - AWD
+#
 Here is the fit result:
+#
 ![Linear Regression](https://github.com/zborglin/MechaCar_Statistical_Analysis/blob/main/images/Linear_Model.png)
 - The intercept, vehicle weight, and ground clearance all provided non-random amounts of variance to the mpg values in the dataset - meaning the are statistically significant with 95% confidence.
 - The slope of the linear model is not considered to be zero with a p-value lower than 0.05
@@ -26,15 +28,28 @@ Here is the fit result:
 
 ### Summary Statistics on Suspension Coils
 Summary statistics for overall car population:
+#
 ![Overall Summary](https://github.com/zborglin/MechaCar_Statistical_Analysis/blob/main/images/Suspension_Total_Stats.png)
+#
 Summary statistics for car PSI by manufacturing lot:
+#
 ![Overall Summary](https://github.com/zborglin/MechaCar_Statistical_Analysis/blob/main/images/Lot_summary_PSI.png)
+#
 The manufacturing analysis reveals that while the overall population meets the design specification, manufacturing lot 3 exhibits a variance greater than 100 PSI. 
 
 ### T-Tests on Suspension Coils
 The overall population is compared to the mean PSI of the population (1500 PSI):
+#
 ![Overall Summary](https://github.com/zborglin/MechaCar_Statistical_Analysis/blob/main/images/t_test_total.png)
--Overall, the prototype car sample PSI is significantly different than the population PSI with a p-value of 0.06028
+- Overall, the prototype car sample PSI is significantly different than the population PSI with a p-value of 0.06028
+#
 Each manufacturing lot is compared to the mean PSI of the population (1500 PSI):
+#
 ![Overall Summary](https://github.com/zborglin/MechaCar_Statistical_Analysis/blob/main/images/t_test_by_lot.png)
--When looking at each manufacturing lot separately, lots 2 and 3 were significantly different than 1500 while lot 1 was on target with the population PSI.
+- When looking at each manufacturing lot separately, lots 2 and 3 were significantly different than 1500 while lot 1 was on target with the population PSI.
+
+## Study Design: MechaCar vs Competition
+An additional study is recommended in order to compare the MechaCar prototype with competitor products. 
+- The following metrics will be assessed: cost, highway fuel efficiency, and horse power.
+- An ANOVA test will be performed on each of the parameters accross all cars for each company. The null hypothesis is that the means are the same, while the alternative hypothethis is that the means are statisically different. An ANOVA test is used as more than 2 data vectors will be compared.
+- To run this test, the competive car data must be collected and organized into a data frame for analysis. 
